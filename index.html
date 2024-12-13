@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GANGA BHUMI CLUB LOGIN/SIGN UP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h2>GANGA BHUMI CLUB LOGIN/SIGN-UP FORM</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="/register" method="post">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social-button-1"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social-button-2"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social-button-3"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email/mobile number for registration</span>
+			<input type="text" id="name" name="name" placeholder="Name" />
+            <input type="text" 
+                id="emailOrMobile" 
+                name="emailOrMobile" 
+                placeholder="Email or Mobile" 
+                pattern="^(\+?[1-9]\d{1,14}|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$" 
+                title="Please enter a valid email address or phone number." 
+            required />
+			<input type="password" id="password" name="password" placeholder="Password" />
+			<button class="button-click">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="/login" method="post">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social-button-1"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social-button-2"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social-button-3"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+            <input type="text" 
+                id="emailOrMobile" 
+                name="emailOrMobile" 
+                placeholder="Email or Mobile" 
+                pattern="^(\+?[1-9]\d{1,14}|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$" 
+                title="Please enter a valid email address or phone number." 
+            required />
+			<input type="password" id="password" name="password" placeholder="Password" />
+			<a class="clickable">Forgot your password?</a>
+			<button class="button-click">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1 class="welcome-text">Already A Member!!</h1>
+				<p class="welcome-text">To keep connected with us please login with your personal info</p>
+				<button class="ghost-button" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1 class="welcome-text">Hello, Friend!</h1>
+				<p class="welcome-text">Enter your personal details to explore our vibrant culture with us!!</p>
+				<button class="ghost-button" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
